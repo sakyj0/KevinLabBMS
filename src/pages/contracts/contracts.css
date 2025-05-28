@@ -1,0 +1,457 @@
+/* 계약 관리 페이지 스타일 */
+
+.contracts-page {
+  padding: var(--spacing-md);
+}
+
+.contracts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.contracts-title {
+  font-size: var(--font-size-xxl);
+  font-weight: 500;
+  margin: 0;
+}
+
+.contracts-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.search-group {
+  position: relative;
+}
+
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: none;
+  border: none;
+  padding: 0 var(--spacing-sm);
+  color: var(--gray-500);
+  cursor: pointer;
+}
+
+.search-button:hover {
+  color: var(--primary-color);
+}
+
+.contracts-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* 요약 카드 스타일 */
+.summary-card-container {
+  margin-bottom: var(--spacing-md);
+}
+
+.summary-card {
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summary-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.summary-card-title {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.summary-card-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.summary-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-card-value {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin: 0;
+}
+
+.summary-card-sub-value {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  margin-top: var(--spacing-xs);
+}
+
+/* 계약 목록 스타일 */
+.contracts-view-container {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.contracts-table-wrapper {
+  overflow-x: auto;
+}
+
+.contracts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contracts-table th,
+.contracts-table td {
+  padding: var(--spacing-sm);
+  text-align: left;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.contracts-table th {
+  font-weight: 500;
+  background-color: var(--gray-100);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.contracts-table th.sortable {
+  cursor: pointer;
+}
+
+.contracts-table th.sortable:hover {
+  background-color: var(--gray-200);
+}
+
+.contracts-table th .sort-icon {
+  margin-left: var(--spacing-xs);
+  color: var(--gray-400);
+}
+
+.contracts-table th.sorted .sort-icon {
+  color: var(--primary-color);
+}
+
+.contracts-table tbody tr {
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.contracts-table tbody tr:hover {
+  background-color: var(--gray-100);
+}
+
+.contract-amount {
+  font-weight: 500;
+  text-align: right;
+}
+
+.contract-status {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  text-align: center;
+}
+
+.status-active {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--secondary-color);
+}
+
+.status-pending {
+  background-color: rgba(241, 196, 15, 0.1);
+  color: var(--warning-color);
+}
+
+.status-expired {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--danger-color);
+}
+
+/* 계약 상세 정보 스타일 */
+.contract-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.back-button {
+  align-self: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.contract-details-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.contract-details-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.contract-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.contract-details-title {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  margin: 0;
+}
+
+.contract-details-status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.contract-details-body {
+  padding: var(--spacing-md);
+}
+
+.contract-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.contract-info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contract-info-label {
+  font-size: var(--font-size-xs);
+  color: var(--gray-600);
+  margin-bottom: 2px;
+}
+
+.contract-info-value {
+  font-weight: 500;
+}
+
+.contract-description {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--gray-200);
+}
+
+.contract-description-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-xs);
+}
+
+.contract-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-md);
+  justify-content: flex-end;
+}
+
+/* 계약 문서 스타일 */
+.contract-documents-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.contract-documents-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.contract-documents-title {
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  margin: 0;
+}
+
+.contract-documents-body {
+  padding: var(--spacing-md);
+}
+
+.documents-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.document-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-sm);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.document-item:last-child {
+  border-bottom: none;
+}
+
+.document-icon {
+  font-size: 1.25rem;
+  margin-right: var(--spacing-sm);
+  color: var(--gray-600);
+}
+
+.document-info {
+  flex: 1;
+}
+
+.document-name {
+  font-weight: 500;
+  margin: 0;
+}
+
+.document-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  color: var(--gray-600);
+  margin-top: 2px;
+}
+
+.document-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.document-action-button {
+  background: none;
+  border: none;
+  color: var(--gray-600);
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-sm);
+  transition: background-color var(--transition-fast);
+}
+
+.document-action-button:hover {
+  background-color: var(--gray-100);
+  color: var(--primary-color);
+}
+
+.upload-document-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-md);
+}
+
+/* 계약 폼 스타일 */
+.contract-form {
+  max-width: 100%;
+}
+
+.contract-form .form-group {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* 로딩 및 빈 상태 스타일 */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  color: var(--gray-600);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--gray-200);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: var(--spacing-sm);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  color: var(--gray-600);
+}
+
+.empty-state i {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--gray-400);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .contracts-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .contracts-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .filter-group {
+    flex-direction: column;
+  }
+  
+  .contract-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
