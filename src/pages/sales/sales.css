@@ -1,0 +1,309 @@
+/* 영업현황 페이지 스타일 */
+
+.sales-page {
+  padding: var(--spacing-md);
+}
+
+.sales-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.sales-title {
+  font-size: var(--font-size-xxl);
+  font-weight: 500;
+  margin: 0;
+}
+
+.sales-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.search-group {
+  position: relative;
+}
+
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: none;
+  border: none;
+  padding: 0 var(--spacing-sm);
+  color: var(--gray-500);
+  cursor: pointer;
+}
+
+.search-button:hover {
+  color: var(--primary-color);
+}
+
+.sales-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* 차트 스타일 */
+.chart-container {
+  height: 300px;
+  position: relative;
+}
+
+/* 테이블 스타일 */
+.table-container {
+  overflow-x: auto;
+}
+
+.opportunities-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.opportunities-table th,
+.opportunities-table td {
+  padding: var(--spacing-sm);
+  text-align: left;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.opportunities-table th {
+  font-weight: 500;
+  background-color: var(--gray-100);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.opportunities-table tbody tr {
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.opportunities-table tbody tr:hover {
+  background-color: var(--gray-100);
+}
+
+.opportunity-amount {
+  font-weight: 500;
+  text-align: right;
+}
+
+.opportunity-probability {
+  text-align: center;
+}
+
+.opportunity-status {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  text-align: center;
+}
+
+.status-active {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: var(--primary-color);
+}
+
+.status-won {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--secondary-color);
+}
+
+.status-lost {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--danger-color);
+}
+
+/* 타임라인 스타일 */
+.timeline-container {
+  padding: var(--spacing-sm) 0;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 2px;
+  background-color: var(--gray-300);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--spacing-md);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -30px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.timeline-content {
+  background-color: var(--gray-100);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+}
+
+.timeline-title {
+  font-weight: 500;
+  margin: 0;
+}
+
+.timeline-date {
+  font-size: var(--font-size-xs);
+  color: var(--gray-600);
+}
+
+.timeline-body {
+  color: var(--gray-700);
+  font-size: var(--font-size-sm);
+}
+
+/* 카드 헤더 액션 스타일 */
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.sort-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.sort-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  margin: 0;
+}
+
+/* 영업 기회 상세 모달 스타일 */
+.opportunity-details {
+  padding: var(--spacing-xs);
+}
+
+.opportunity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.opportunity-name {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  margin: 0;
+}
+
+.opportunity-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: var(--font-size-xs);
+  color: var(--gray-600);
+  margin-bottom: 2px;
+}
+
+.info-value {
+  font-weight: 500;
+}
+
+.opportunity-description {
+  margin-bottom: var(--spacing-md);
+}
+
+.opportunity-description h5 {
+  font-size: var(--font-size-md);
+  margin-bottom: var(--spacing-xs);
+}
+
+.opportunity-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+  justify-content: flex-end;
+}
+
+/* 영업 기회 폼 스타일 */
+.opportunity-form {
+  max-width: 100%;
+}
+
+.opportunity-form .form-group {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .sales-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .sales-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .filter-group {
+    flex-direction: column;
+  }
+  
+  .opportunity-info {
+    grid-template-columns: 1fr;
+  }
+}
