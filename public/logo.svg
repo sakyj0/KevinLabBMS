@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text { font-family: 'Arial', sans-serif; font-weight: bold; }
+    .primary { fill: #3498db; }
+    .secondary { fill: #2ecc71; }
+    .dark { fill: #2c3e50; }
+  </style>
+  
+  <!-- 로고 아이콘 -->
+  <g transform="translate(10, 5)">
+    <path class="primary" d="M25,0 L45,15 L25,30 L5,15 Z" />
+    <path class="secondary" d="M25,10 L40,20 L25,30 L10,20 Z" />
+    <circle class="dark" cx="25" cy="20" r="5" />
+  </g>
+  
+  <!-- 로고 텍스트 -->
+  <g transform="translate(60, 35)">
+    <text class="logo-text primary" font-size="24">Kevin</text>
+    <text class="logo-text secondary" x="70" font-size="24">Lab</text>
+  </g>
+</svg>

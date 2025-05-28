@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>케빈랩 사업관리 시스템</title>
+  <link rel="stylesheet" href="/src/assets/styles/main.css">
+  <link rel="stylesheet" href="/src/assets/styles/layout.css">
+  <link rel="stylesheet" href="/src/pages/login/login.css">
+  <link rel="stylesheet" href="/src/pages/dashboard/dashboard.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 앱 콘텐츠가 여기에 로드됩니다 -->
+    <div class="loading">
+      <div class="spinner"></div>
+      <p>로딩 중...</p>
+    </div>
+  </div>
+  <script type="importmap">
+    {
+      "imports": {
+        "chart.js": "https://cdn.jsdelivr.net/npm/chart.js@4.4.1/+esm"
+      }
+    }
+  </script>
+  <script type="module" src="/src/index.js"></script>
+</body>
+</html>

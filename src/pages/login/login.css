@@ -1,0 +1,154 @@
+/* 로그인 페이지 스타일 */
+
+.login-page {
+  min-height: 100vh;
+  background-color: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card {
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.login-header {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+  background-color: var(--gray-100);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.logo {
+  margin-bottom: var(--spacing-md);
+}
+
+.logo-image {
+  height: 60px;
+  width: auto;
+}
+
+.login-title {
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+.login-body {
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.login-form {
+  margin-bottom: var(--spacing-md);
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--gray-600);
+  cursor: pointer;
+  padding: 5px;
+}
+
+.password-toggle:hover {
+  color: var(--gray-800);
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-checkbox {
+  margin-right: var(--spacing-xs);
+}
+
+.remember-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-700);
+  cursor: pointer;
+}
+
+.login-button {
+  width: 100%;
+  margin-top: var(--spacing-md);
+  position: relative;
+}
+
+.button-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-footer {
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-align: center;
+  border-top: 1px solid var(--gray-200);
+  background-color: var(--gray-100);
+}
+
+.login-footer-text {
+  font-size: var(--font-size-xs);
+  color: var(--gray-600);
+  margin: 0;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 576px) {
+  .login-container {
+    max-width: 100%;
+  }
+  
+  .login-card {
+    border-radius: var(--border-radius-md);
+  }
+  
+  .login-header {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .login-body {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}
+
+/* 다크 모드 */
+@media (prefers-color-scheme: dark) {
+  .login-card {
+    background-color: var(--gray-800);
+  }
+  
+  .login-header,
+  .login-footer {
+    background-color: var(--gray-900);
+    border-color: var(--gray-700);
+  }
+  
+  .login-title {
+    color: var(--light-color);
+  }
+  
+  .login-footer-text {
+    color: var(--gray-400);
+  }
+}
